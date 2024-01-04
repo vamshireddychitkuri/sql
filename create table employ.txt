@@ -1,0 +1,87 @@
+create table employ
+(
+e_id int not null,
+e_name varchar(20),
+e_salary int,
+e_age float,
+e_gender varchar(20),
+e_dept varchar(20)
+);
+
+insert into employ values('1','vamshi','20000','23','male','assistant');
+
+insert into employ values ('2','kiran','30000','24','male','associate');
+
+insert into employ values ('3','reddy','40000','25','female','manager');
+
+insert into employ values ('4','mahe','50000','26','male','director');
+
+insert into employ values ('5','abhi','60000','27','female','employee');
+
+select* from employ
+
+
+select * from employ where e_age=24;
+select * from employ where e_dept='assistant';
+select * from employ where e_gender='male';
+select * from employ where e_age>26; 
+select * from employ where e_age=26 and e_dept='director'; 
+
+select max(e_age) from employ;
+select min(e_age) from employ;
+select * from employ where e_gender='male' and e_dept='associate';
+select * from employ where e_age>26;
+select * from employ where e_dept='associate';
+alter table employ 
+add email varchar(255);  
+select * from employ;
+
+alter table employ 
+add country char(9);
+
+desc employ
+    alter table employ 
+MODIFY column country to state;
+select * from employ;
+
+alter table employ
+    
+drop column email;
+
+select * from employ;
+
+alter table employ
+modify column country to state;
+
+alter command into the drop command froth etab
+
+
+create table employ
+(
+e_id int not null,
+e_name varchar(20),
+e_salary int,
+e_age float,
+e_gender varchar(20),
+e_dept varchar(20)
+);
+
+insert into employ values('1','vamshi','20000','23','male','assistant');
+
+insert into employ values ('2','kiran','30000','24','male','associate');
+
+insert into employ values ('3','reddy','40000','25','female','manager');
+
+insert into employ values ('4','mahe','50000','26','male','director');
+
+insert into employ values ('5','abhi','60000','27','female','employee');
+
+select* from employ
+
+select count(*) from employ where e_dept='associate';
+select count(*) from employ where e_gender='male';
+select avg(e_salary) from employ;
+select sum(e_salary) from employ;
+select * from employ where e_dept like'm%';
+select * from employ where e_dept like'%m%';
+select * from employ where e_gender like'%l%';
